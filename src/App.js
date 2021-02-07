@@ -5,6 +5,7 @@ import GlobalStyle from "./compoents/GlobalStyle";
 import ABoutUs from "./pages/AboutUs";
 import Nav from "./compoents/Nav";
 import OurWork from "./pages/OurWork";
+import MovieDetail from "./pages/MovieDetail";
 import ContactUs from "./pages/ContactUs";
 //Router
 import { Switch, Route } from "react-router-dom";
@@ -18,8 +19,11 @@ function App() {
         <Route path="/" exact>
           <ABoutUs />
         </Route>
-        <Route path="/work">
+        <Route path="/work" exact>
           <OurWork />
+        </Route>
+        <Route path="/work/:id">
+          <MovieDetail />
         </Route>
         <Route path="/contact">
           <ContactUs />
