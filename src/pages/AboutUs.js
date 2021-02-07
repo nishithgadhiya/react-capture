@@ -9,7 +9,7 @@ const ABoutUs = () => {
     <>
       <AboutSection />
       <ServicesSection />
-      <FaqSection />>
+      <FaqSection />
     </>
   );
 };
