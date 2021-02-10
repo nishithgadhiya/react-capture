@@ -8,7 +8,6 @@ export const pageAnimation = {
     y: 0,
     transition: {
       duration: 0.5,
-      when: "beforeChildren",
       staggerChildren: 0.25,
     },
   },
@@ -68,7 +67,7 @@ export const slider = {
   show: {
     x: "100%",
     skew: "0deg",
-    transition: { duration: 1, ease: "easeOut" },
+    transition: { duration: 1 },
   },
 };
 
@@ -84,11 +83,11 @@ export const scrollReveal = {
   hidden: {
     opacity: 0,
     scale: 0.8,
-    transition: { duration: 0.2 },
+    transition: { duration: 0.5 },
   },
   show: {
     opacity: 1,
     scale: 1,
-    transition: { duration: 0.5, ease: "easeOut" },
+    transition: { duration: 0.5 },
   },
 };

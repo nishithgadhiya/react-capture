@@ -5,8 +5,7 @@ import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
 const Nav = () => {
-  const { pathName } = useLocation();
-  console.log(pathName);
+  const { pathname } = useLocation();
   return (
     <StyledNav>
       <h1>
@@ -18,21 +17,26 @@ const Nav = () => {
         <li>
           <Link to="/">1. About Us</Link>
           <Line
-            variants={{ transition: { duration: "5" } }}
+            transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathName === "/" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/" ? "50%" : "0%" }}
           />
         </li>
         <li>
           <Link to="/work">2. Our Work</Link>
           <Line
-            variants={{ transition: { duration: "5" } }}
+            transition={{ duration: 0.75 }}
             initial={{ width: "0%" }}
-            animate={{ width: pathName === "/work" ? "50%" : "0%" }}
+            animate={{ width: pathname === "/work" ? "50%" : "0%" }}
           />
         </li>
         <li>
           <Link to="/contact">3. Contact Us</Link>
+          <Line
+            transition={{ duration: 0.75 }}
+            initial={{ width: "0%" }}
+            animate={{ width: pathname === "/contact" ? "50%" : "0%" }}
+          />
         </li>
       </ul>
     </StyledNav>
@@ -49,7 +53,7 @@ const StyledNav = styled.nav`
   background: #282828;
   position: sticky;
   top: 0;
-  z-index: 3;
+  z-index: 10;
   a {
     color: white;
     text-decoration: none;
@@ -60,7 +64,7 @@ const StyledNav = styled.nav`
   }
   #logo {
     font-family: "Lobster", cursive;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: lighter;
   }
   li {
@@ -87,10 +91,14 @@ const StyledNav = styled.nav`
 
 const Line = styled(motion.div)`
   height: 0.3rem;
-  width: 50%;
+  width: 0%;
   background: #23d997;
   position: absolute;
-  bottom: -10px;
+  left: 60%;
+  bottom: -80%;
+  @media (max-width: 786px) {
+    left: 0%;
+  }
 `;
 
 export default Nav;

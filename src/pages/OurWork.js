@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 //Images
 import athlete from "../img/athlete-small.png";
 import theracer from "../img/theracer-small.png";
 import goodtimes from "../img/goodtimes-small.png";
-import { Link } from "react-router-dom";
 //Animations
 import { motion } from "framer-motion";
 import {
@@ -45,7 +45,7 @@ const OurWork = () => {
         </Link>
       </Movie>
       <Movie ref={element} variants={fade} animate={controls} initial="hidden">
-        <h1>The Racer</h1>
+        <h2>The Racer</h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/the-racer">
           <img src={theracer} alt="theracer" />
@@ -57,7 +57,7 @@ const OurWork = () => {
         animate={controls2}
         initial="hidden"
       >
-        <h1>Good Times</h1>
+        <h2>Good Times</h2>
         <motion.div variants={lineAnimation} className="line"></motion.div>
         <Link to="/work/good-times">
           <img src={goodtimes} alt="goodtimes" />
@@ -73,7 +73,7 @@ const Work = styled(motion.div)`
   overflow: hidden;
   padding: 5rem 10rem;
   @media (max-width: 786px) {
-    padding: 2rem;
+    padding: 2rem 2rem;
   }
   h2 {
     padding: 1rem 0rem;
@@ -104,7 +104,7 @@ const Frame1 = styled(motion.div)`
   left: 0;
   top: 10%;
   width: 100%;
-  height: 100vh;
+  height: 100%;
   z-index: 2;
   background: #fffebf;
 `;
