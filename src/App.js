@@ -1,9 +1,9 @@
 import React from "react";
 //GlobalStyle
-import GlobalStyle from "./compoents/GlobalStyle";
+import GlobalStyle from "./components/GlobalStyle";
 //import pages
 import ABoutUs from "./pages/AboutUs";
-import Nav from "./compoents/Nav";
+import Nav from "./components/Nav";
 import OurWork from "./pages/OurWork";
 import MovieDetail from "./pages/MovieDetail";
 import ContactUs from "./pages/ContactUs";
